@@ -18,7 +18,7 @@ else
         echo "${I_OK}    package list ...                                                            ${I_OK}";
         apk version
         echo "${I_OK}    Installing Updates ...                                                      ${I_OK}";
-        apk upgrade
+        apk upgrade -U --progress -a
         echo "${I_OK}    Fixed ...                                                                   ${I_OK}";
         apk fix
         dates=$(date +'%d.%m.%Y %H:%M')
