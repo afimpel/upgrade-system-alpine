@@ -10,6 +10,6 @@ Upgrade to Alpine Linux
 
 ----
 
- **Run:** upgrade-system
- **Run:** upgrade-system-poweroff
- **Run:** upgrade-system-reboot
+ * **Run:** upgrade-system
+ * **Run:** upgrade-system-poweroff
+ * **Run:** upgrade-system-reboot
