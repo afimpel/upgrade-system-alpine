@@ -1,0 +1,18 @@
+#!/bin/sh
+# Reset
+UUID=$(id -u)
+UUID=$(( UUID + 0 ))
+I_OK="✔"
+I_KO="X"
+
+
+NC='\e[0m'
+if [ $UUID != 0 ]; then
+        echo "${I_KO}    Start the Script as 'root' for it to work properly    ${I_KO}";
+        exit 1;
+else
+        sh /usr/bin/upgrade-system;
+        echo "${I_OK}    reboot ...                                                                  ${I_OK}";
+        sleep 3s;
+        reboot;
+fi
