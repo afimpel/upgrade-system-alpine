@@ -3,7 +3,7 @@
 UUID=$(id -u)
 UUID=$(( UUID + 0 ))
 I_OK="✔"
-I_KO="X"
+I_KO="✖️"
 
 
 NC='\e[0m'
