@@ -1,0 +1,13 @@
+#!/bin/bash
+if [ ! -f ~/upgrade-system ]; then
+        date > ~/upgrade-system
+        echo 'Updating everything ... '
+        /usr/bin/notify-send "Updating everything ... " -i view-refresh -t 3000
+        /usr/bin/xterm -e 'flatpak update -y'
+        /usr/bin/xterm -e 'sudo upgrade-system'
+	/usr/bin/notify-send "Rebooting ... " -i xfsm-reboot -t 5000
+        sleep 6s
+        echo 'Rebooting ... '
+        rm ~/upgrade-system
+        xfce4-session-logout --reboot --fast
+fi
