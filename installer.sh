@@ -7,4 +7,3 @@ curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/upg
 curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/upgrade-system-poweroff > /usr/bin/upgrade-system-poweroff
 curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/upgrade-system-reboot > /usr/bin/upgrade-system-reboot
 chmod 777 /usr/bin/upgrade-system* -R
-upgrade-system-reboot
