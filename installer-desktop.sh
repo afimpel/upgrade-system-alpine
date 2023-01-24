@@ -1,7 +1,5 @@
 #!/bin/bash
 wget  -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/installer.sh | sh
-
-apk add flatpak
 mkdir -p /usr/share/pixmaps/
 mkdir -p /usr/share/applications/
 
