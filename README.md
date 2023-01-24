@@ -11,7 +11,7 @@ Upgrade to Alpine Linux
 
 ## Version one link.
 ‼️ All as root or with root permissions. ‼️
- ```wget  -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/installer.sh | sh ```
+ * ```wget  -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/installer.sh | sh ```
 
 ## Run
 ### ROOT user.
