@@ -1,7 +1,8 @@
 # upgrade-system-alpine
 Upgrade to Alpine Linux
 
-## version Git.
+## terminal version
+### version Git.
 
 ‼️ All as root or with root permissions. ‼️
  * ```git clone https://github.com/afimpel/upgrade-system-alpine.git ```
@@ -9,17 +10,23 @@ Upgrade to Alpine Linux
  * ```cp upgrade-* /usr/bin/ ```
  * ```chmod 777 /usr/bin/upgrade-system* -R ```
 
-## Version one link.
+### Version one link.
 ‼️ All as root or with root permissions. ‼️
  * ```wget  -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/installer.sh | sh ```
 
-## Run
-### ROOT user.
+### Run
+#### ROOT user.
  * **Run:** ```upgrade-system ```
  * **Run:** ```upgrade-system-poweroff ```
  * **Run:** ```upgrade-system-reboot ```
 
-### Sudo User.
+#### Sudo User.
  * **Run:** ```sudo upgrade-system ```
  * **Run:** ```sudo upgrade-system-poweroff ```
  * **Run:** ```sudo upgrade-system-reboot ```
+
+----
+## Desktot
+### Version one link.
+‼️ All as root or with root permissions. ‼️
+ * ```wget  -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/installer-desktop.sh | sh ```
