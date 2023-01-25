@@ -8,5 +8,5 @@ if [ ! -f ~/upgrade-system ]; then
         sleep 6s
         echo 'Rebooting ... '
         rm ~/upgrade-system
-        xfce4-session-logout --reboot --fast
+        sudo reboot
 fi

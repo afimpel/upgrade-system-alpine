@@ -8,5 +8,5 @@ if [ ! -f ~/upgrade-system ]; then
         sleep 6s
         echo 'Turning off ... '
         rm ~/upgrade-system
-        xfce4-session-logout --halt --fast
+        sudo poweroff
 fi
