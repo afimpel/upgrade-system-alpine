@@ -1,5 +1,4 @@
 #!/bin/bash
-apk add flatpak
 mkdir -p /usr/share/pixmaps/
 mkdir -p /usr/share/applications/
 
