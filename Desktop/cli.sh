@@ -12,7 +12,7 @@ curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/
 
 curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/Desktop/upgrade.png > /usr/share/pixmaps/upgrade.png
 curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/Desktop/shutdown.png > /usr/share/pixmaps/shutdown.png
-curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/Desktop/restart.png > /usr/share/pixmaps/restart.png
+curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/Desktop/reboot.png > /usr/share/pixmaps/reboot.png
 
 chmod 777 /usr/share/applications/gksu_*
 chmod 777 /usr/share/pixmaps/* -R
