@@ -2,7 +2,7 @@
 if [ ! -f ~/upgrade-system ]; then
 	date > ~/upgrade-system
 	echo 'Updating everything ...'
-	/usr/bin/notify-send "Updating everything ..." -i view-refresh -t 3000
+	/usr/bin/notify-send "Updating everything ..." -i upgrade -t 3000
 	/usr/bin/xterm -e 'sudo upgrade-system'
-        rm ~/upgrade-system
+    rm ~/upgrade-system
 fi
