@@ -12,7 +12,7 @@ wget --no-cache -O /usr/share/applications/gksu_poweroff.desktop ${URLgithub}/ma
 wget --no-cache -O /usr/share/applications/gksu_reboot.desktop ${URLgithub}/main/Desktop/gksu_reboot.desktop
 
 wget --no-cache -O /usr/share/pixmaps/upgrade.png ${URLgithub}/main/Desktop/upgrade.png
-wget --no-cache -O /usr/share/pixmaps/poweroff.png ${URLgithub}/main/Desktop/poweroff.png
+wget --no-cache -O /usr/share/pixmaps/shutdown.png ${URLgithub}/main/Desktop/shutdown.png
 wget --no-cache -O /usr/share/pixmaps/reboot.png ${URLgithub}/main/Desktop/reboot.png
 
 chmod 777 /usr/share/applications/gksu_*
