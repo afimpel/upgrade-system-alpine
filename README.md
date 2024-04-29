@@ -10,9 +10,14 @@ Upgrade to Alpine Linux
  * ```cp upgrade-* /usr/bin/ ```
  * ```chmod 777 /usr/bin/upgrade-system* -R ```
 
+----
+
 ### Version one link.
+
 ‼️ All as root or with root permissions. ‼️
  * ```wget  -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/installer.sh | sh ```
+
+ ----
 
 ### Run
 #### ROOT user.
@@ -26,7 +31,8 @@ Upgrade to Alpine Linux
  * **Run:** ```sudo upgrade-system-reboot ```
 
 ----
-## Desktot
+
+## Desktop
 ### Version one link.
 ‼️ All as root or with root permissions. ‼️
  * ```wget  -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/installer-desktop.sh | sh ```

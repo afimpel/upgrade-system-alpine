@@ -1,13 +1,11 @@
 [Desktop Entry]
+Version=1.0
+Type=Application
 Name=Upgrade and Shutdown
 Comment=Upgrade and Shutdown ...
-Exec=/usr/bin/pkexec_upgrade-system-poweroff
-Terminal=false
-Type=Application
-Icon=shutdown
 Categories=System;
-Keywords=shell;prompt;command;commandline;cmd;
-X-Desktop-File-Install-Version=0.23
-X-XFCE-Source=file:///usr/share/applications/debian-xterm.desktop
+Exec=/usr/bin/pkexec_upgrade-system-poweroff
+Icon=shutdown
 Path=
+Terminal=false
 StartupNotify=false

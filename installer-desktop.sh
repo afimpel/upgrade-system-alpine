@@ -1,19 +1,21 @@
 #!/bin/bash
-wget  -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/installer.sh | sh
+URLgithub="https://raw.githubusercontent.com/afimpel/upgrade-system-alpine"
+
+wget --no-cache -O - ${URLgithub}/main/installer.sh | sh
 mkdir -p /usr/share/pixmaps/
 mkdir -p /usr/share/applications/
 
-curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/pkexec_upgrade-system > /usr/bin/pkexec_upgrade-system
-curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/pkexec_upgrade-system-poweroff > /usr/bin/pkexec_upgrade-system-poweroff
-curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/pkexec_upgrade-system-reboot > /usr/bin/pkexec_upgrade-system-reboot
+wget --no-cache -O /usr/bin/pkexec_upgrade-system ${URLgithub}/desktop/pkexec_upgrade-system
+wget --no-cache -O /usr/bin/pkexec_upgrade-system-poweroff ${URLgithub}/desktop/pkexec_upgrade-system-poweroff
+wget --no-cache -O /usr/bin/pkexec_upgrade-system-reboot ${URLgithub}/desktop/pkexec_upgrade-system-reboot
 
-curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/Desktop/gksu_upgrade.desktop > /usr/share/applications/gksu_upgrade.desktop
-curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/Desktop/gksu_poweroff.desktop > /usr/share/applications/gksu_poweroff.desktop
-curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/Desktop/gksu_reboot.desktop > /usr/share/applications/gksu_reboot.desktop
+wget --no-cache -O /usr/share/applications/gksu_upgrade.desktop ${URLgithub}/desktop/Desktop/gksu_upgrade.desktop
+wget --no-cache -O /usr/share/applications/gksu_poweroff.desktop ${URLgithub}/desktop/Desktop/gksu_poweroff.desktop
+wget --no-cache -O /usr/share/applications/gksu_reboot.desktop ${URLgithub}/desktop/Desktop/gksu_reboot.desktop
 
-curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/Desktop/upgrade.png > /usr/share/pixmaps/upgrade.png
-curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/Desktop/shutdown.png > /usr/share/pixmaps/shutdown.png
-curl -L https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/desktop/Desktop/reboot.png > /usr/share/pixmaps/reboot.png
+wget --no-cache -O /usr/share/pixmaps/upgrade.png ${URLgithub}/desktop/Desktop/upgrade.png
+wget --no-cache -O /usr/share/pixmaps/poweroff.png ${URLgithub}/desktop/Desktop/poweroff.png
+wget --no-cache -O /usr/share/pixmaps/reboot.png ${URLgithub}/desktop/Desktop/reboot.png
 
 chmod 777 /usr/share/applications/gksu_*
 chmod 777 /usr/share/pixmaps/* -R
