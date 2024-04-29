@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ ! -f ~/upgrade-system ]; then
+        date > ~/upgrade-system
+        echo 'Updating everything ... '
+        /usr/bin/notify-send "Updating everything ... " -i upgrade -t 3000
+        /usr/bin/xterm -e 'sudo upgrade-system'
+	/usr/bin/notify-send "Turning off ... " -i shutdown -t 5000
+        sleep 6s
+        echo 'Turning off ... '
+        rm ~/upgrade-system
+        sudo poweroff
+fi

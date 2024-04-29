@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Upgrade and Reboot
+Comment=Upgrade and Reboot ...
+Categories=System;
+Exec=/usr/bin/pkexec_upgrade-system-reboot
+Icon=reboot
+Path=
+Terminal=false
+StartupNotify=false

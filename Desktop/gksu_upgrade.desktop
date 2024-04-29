@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Upgrade
+Comment=Upgrade ...
+Categories=System;
+Exec=/usr/bin/pkexec_upgrade-system
+Icon=upgrade
+Path=
+Terminal=false
+StartupNotify=false

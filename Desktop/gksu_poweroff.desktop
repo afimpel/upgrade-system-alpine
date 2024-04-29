@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Upgrade and Shutdown
+Comment=Upgrade and Shutdown ...
+Categories=System;
+Exec=/usr/bin/pkexec_upgrade-system-poweroff
+Icon=shutdown
+Path=
+Terminal=false
+StartupNotify=false
