@@ -18,7 +18,7 @@ Upgrade to Alpine Linux
 
 ‼️ All as root or with root permissions. ‼️
 ```sh
-wget  -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/installer.sh | sh
+wget --no-cache -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/installer.sh | sh
 ```
 
  ----
@@ -45,5 +45,5 @@ sudo upgrade-system-reboot
 ‼️ All as root or with root permissions. ‼️
  *
 ```sh
-wget  -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/installer-desktop.sh | sh
+wget --no-cache -O - https://raw.githubusercontent.com/afimpel/upgrade-system-alpine/main/installer-desktop.sh | sh
 ```
