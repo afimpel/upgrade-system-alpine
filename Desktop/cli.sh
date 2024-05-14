@@ -1,5 +1,5 @@
 #!/bin/bash
-URLgithub="https://raw.githubusercontent.com/afimpel/upgrade-system-alipne"
+URLgithub="https://raw.githubusercontent.com/afimpel/upgrade-system-alpine"
 mkdir -p /usr/share/pixmaps/
 mkdir -p /usr/share/applications/
 apk add xterm
