@@ -2,7 +2,7 @@
 URLgithub="https://raw.githubusercontent.com/afimpel/upgrade-system-alipne"
 mkdir -p /usr/share/pixmaps/
 mkdir -p /usr/share/applications/
-apk add xterm -y
+apk add xterm
 wget --no-cache -O /usr/bin/pkexec_upgrade-system ${URLgithub}/main/pkexec_upgrade-system
 wget --no-cache -O /usr/bin/pkexec_upgrade-system-poweroff ${URLgithub}/main/pkexec_upgrade-system-poweroff
 wget --no-cache -O /usr/bin/pkexec_upgrade-system-reboot ${URLgithub}/main/pkexec_upgrade-system-reboot

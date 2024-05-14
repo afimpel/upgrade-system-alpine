@@ -2,7 +2,7 @@
 URLgithub="https://raw.githubusercontent.com/afimpel/upgrade-system-alpine"
 
 wget --no-cache -O - ${URLgithub}/main/installer.sh | sh
-apk add xterm -y
+apk add xterm
 mkdir -p /usr/share/pixmaps/
 mkdir -p /usr/share/applications/
 
