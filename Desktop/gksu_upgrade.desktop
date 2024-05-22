@@ -2,8 +2,10 @@
 Version=1.0
 Type=Application
 Name=Upgrade
-Comment=Upgrade ...
-Categories=System;
+Name[es]=Actualizar
+Comment=Se actualiza el sistema y se cierra la terminal.
+Comment[es]=The system is updated and the terminal is closed.
+Categories=System;Settings
 Exec=/usr/bin/pkexec_upgrade-system
 Icon=upgrade
 Path=

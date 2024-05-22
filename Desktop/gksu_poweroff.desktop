@@ -2,8 +2,10 @@
 Version=1.0
 Type=Application
 Name=Upgrade and Shutdown
-Comment=Upgrade and Shutdown ...
-Categories=System;
+Name[es]=Actualizar y Apagar
+Comment=The system is updated and the PC is turned off.
+Comment[es]=Se actualiza el sistema y se apaga la PC.
+Categories=System;Settings
 Exec=/usr/bin/pkexec_upgrade-system-poweroff
 Icon=shutdown
 Path=

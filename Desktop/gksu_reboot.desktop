@@ -2,8 +2,10 @@
 Version=1.0
 Type=Application
 Name=Upgrade and Reboot
-Comment=Upgrade and Reboot ...
-Categories=System;
+Name[es]=Actualizar y Reiniciar
+Comment=The system is updated and the PC is restarted.
+Comment[es]=Se actualiza el sistema y se reinicia la PC.
+Categories=System;Settings
 Exec=/usr/bin/pkexec_upgrade-system-reboot
 Icon=reboot
 Path=
