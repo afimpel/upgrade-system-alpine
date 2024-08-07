@@ -9,7 +9,9 @@ Upgrade to Alpine Linux
  git clone https://github.com/afimpel/upgrade-system-alpine.git
  cd upgrade-system-alpine/
  cp upgrade-* /usr/bin/
+ cp check-pa* /usr/bin/
  chmod 777 /usr/bin/upgrade-system* -R
+ chmod 777 /usr/bin/check-pa* -R
  ```
 
 ----
@@ -26,6 +28,7 @@ wget --no-cache -O - https://raw.githubusercontent.com/afimpel/upgrade-system-al
 ### Run
 #### ROOT user. 
 ```sh
+check-package
 upgrade-system
 upgrade-system-poweroff
 upgrade-system-reboot
@@ -33,6 +36,7 @@ upgrade-system-reboot
 
 #### Sudo User.
 ```sh
+sudo check-package
 sudo upgrade-system
 sudo upgrade-system-poweroff
 sudo upgrade-system-reboot

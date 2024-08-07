@@ -1,0 +1,18 @@
+#!/bin/sh
+# Reset
+UUID=$(id -u)
+UUID=$(( UUID + 0 ))
+I_OK="✔"
+I_KO="✖️"
+
+
+NC='\e[0m'
+if [ $UUID != 0 ]; then
+        echo "${I_KO}    Start the Script as 'root' for it to work properly    ${I_KO}";
+        exit 1;
+else
+    packageUpdate0=$(apk update && apk version | grep -c "^[^<]")
+    packageUpdate0=$( echo $packageUpdate0 | rev | cut -d' ' -f1 | rev )
+    packageUpdate=$((( $packageUpdate0 * 1 ) - 1))
+    echo -e "Upadate   \t\t: \t ${packageUpdate} packages";
+fi
