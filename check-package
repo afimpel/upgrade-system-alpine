@@ -14,5 +14,5 @@ else
     packageUpdate0=$(apk update && apk version | grep -c "^[^<]")
     packageUpdate0=$( echo $packageUpdate0 | rev | cut -d' ' -f1 | rev )
     packageUpdate=$((( $packageUpdate0 * 1 ) - 1))
-    echo -e "Upadate   \t\t: \t ${packageUpdate} packages";
+    echo -e "Upadate : \t\t ${packageUpdate} packages";
 fi
