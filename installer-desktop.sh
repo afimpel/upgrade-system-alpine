@@ -28,7 +28,7 @@ else
     wget --no-cache -O /usr/share/pixmaps/shutdown.png ${URLgithub}/main/Desktop/shutdown.png
     wget --no-cache -O /usr/share/pixmaps/reboot.png ${URLgithub}/main/Desktop/reboot.png
 
-    chmod 777 /usr/share/applications/pkexec_*
+    chmod 777 /usr/share/applications/gksu_*
     chmod 777 /usr/share/pixmaps/* -R
     chmod 777 /usr/bin/pkexec_upgrad* -R
 fi
