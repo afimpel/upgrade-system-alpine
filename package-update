@@ -98,9 +98,9 @@ L1 () {
 
 completeLine() {
     if [ "$3" == '3' ]; then
-        menos=$(( 9 + $5 ))
+        menos=$(( 11 + $5 ))
     else
-        menos=8
+        menos=10
     fi
     local input_string="$1$4"
     local input_string0="$1"
