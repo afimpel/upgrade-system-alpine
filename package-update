@@ -86,7 +86,6 @@ R1 () {
 }
 
 CUSTOM () {
-    echo $systemRUN
     data=$(completeLine "$2" "$7" 3 "$4" $9);
     printf " ${5}$6 ${NC}$1 $2$3 $data ${5}$8${NC}\n${NC}"
 }
@@ -136,4 +135,5 @@ else
     packageUpdate=$((( $packageUpdate0 * 1 ) - 1))
     clear
     CUSTOM $Green "Upadate" $IGreen "${packageUpdate} packages" $BIGreen "▶" "." "▶" 0
+    echo " "
 fi
