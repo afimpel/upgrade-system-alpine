@@ -188,5 +188,5 @@ else
         rm /var/cache/apk/* -v
         echo " ";
 	dates=$(date +'%Y-%m-%d %H:%M')
-	CUSTOM $IYellow "Updated system:" $IGreen "$dates" $BWhite "✔" "." "✔" 0 "$@"
+	CUSTOM $IYellow "Updated system" $IGreen "$dates" $BWhite "✔" "." "✔" 0 "$@"
 fi
