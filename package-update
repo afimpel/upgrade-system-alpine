@@ -170,6 +170,5 @@ else
     packageUpdate0=$(apk update && apk version | grep -c "^[^<]")
     packageUpdate0=$( echo $packageUpdate0 | rev | cut -d' ' -f1 | rev )
     packageUpdate=$((( $packageUpdate0 * 1 ) - 1))
-    clear
     CUSTOM $Green "Upadate" $IGreen "${packageUpdate} packages" $BIGreen "▶" "." "▶" 0 "$@"
 fi
