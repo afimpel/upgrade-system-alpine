@@ -78,20 +78,57 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-
 R1 () {
-    data=$(completeLine "$2" "$5" 1);
-    printf " ${3}$4 ${NC}$1 $data ${3}$4${NC}\n${NC}"
+    local customColor0="$1"
+    local customText0="$2"
+    local customColor1="$3"
+    local customIcon0="$4"
+    local customRepeat0="$5"
+    shift 5
+    local ttyMode=$1
+    if [ "$ttyMode" = "tty" ]; then
+        printf " $customIcon0 $customText0 :\n${NC}"
+    else
+        data=$(completeLine "$customText0" "$customRepeat0" 1);
+        printf " ${customColor1}$customIcon0 ${NC}$customColor0 $data ${customColor1}$customIcon0${NC}\n${NC}"
+    fi
 }
 
 CUSTOM () {
-    data=$(completeLine "$2" "$7" 3 "$4" $9);
-    printf " ${5}$6 ${NC}$1 $2$3 $data ${5}$8${NC}\n${NC}"
+    local customColor0="$1"
+    local customText0="$2"
+    local customColor1="$3"
+    local customText1="$4"
+    local customColor2="$5"
+    local customIcon0="$6"
+    local customRepeat0="$7"
+    local customIcon1="$8"
+    local customNumber=$9
+    shift 9
+    local ttyMode=$1
+    if [ "$ttyMode" = "tty" ]; then
+        printf " $customIcon0 $customText0 : $customText1\n${NC}"
+    else
+        data=$(completeLine "$customText0" "$customRepeat0" 3 "$customText1" $customNumber);
+        printf " ${customColor2}${customIcon0} ${NC}${customColor0} $customText0${customColor1} $data ${customColor2}$customIcon1${NC}\n${NC}"
+    fi
 }
 
 L1 () {
-    data=$(completeLine "$2" "$5" 2);
-    printf " ${3}$4 ${NC}$1 $data ${3}$4${NC}\n${NC}"
+    local customColor0="$1"
+    local customText0="$2"
+    local customColor1="$3"
+    local customIcon0="$4"
+    local customRepeat0="$5"
+    shift 5
+    
+    local ttyMode=$1
+    if [ "$ttyMode" = "tty" ]; then
+        printf " $customIcon0 $customText0 :\n${NC}"
+    else
+        data=$(completeLine "$customText0" "$customRepeat0" 2);
+        printf " ${customColor1}$customIcon0 ${NC}$customColor0 $data ${customColor1}$customIcon0${NC}\n${NC}"
+    fi
 }
 
 completeLine() {
@@ -100,7 +137,6 @@ completeLine() {
     else
         menos=10
     fi
-
     local input_string="$1$4"
     local input_string0="$1"
     local input_string1="$4"
@@ -128,12 +164,12 @@ completeLine() {
 }
 
 if [ $UUID != 0 ]; then
-        CUSTOM $Red "Start the Script as ROOT for it to work properly" $IRed "${USER^^}" $BIRed "✘" "." "✘" 0
+        CUSTOM $Red "Start the Script as ROOT for it to work properly" $IRed "${USER^^}" $BIRed "✘" "." "✘" 0 "$@"
         exit 1;
 else
-        bash /usr/bin/upgrade-system;
+        bash /usr/bin/upgrade-system "$@";
         echo " ";
-        R1 $IGreen "Poweroff" $BWhite '✔' "."
+        R1 $IGreen "Poweroff" $BWhite '✔' "." "$@"
         sleep 3s;
         poweroff;
 fi
