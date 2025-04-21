@@ -87,10 +87,11 @@ R1 () {
     shift 5
     local ttyMode=$1
     if [ "$ttyMode" = "tty" ]; then
-        printf " $customIcon0 $customText0 :\n${NC}"
+        echo "$customText0 : $customText1" >> /var/log/package.log
+        printf " $customIcon0 $customText0 :\n"
     else
         data=$(completeLine "$customText0" "$customRepeat0" 1);
-        printf " ${customColor1}$customIcon0 ${NC}$customColor0 $data ${customColor1}$customIcon0${NC}\n${NC}"
+        printf " ${customColor1}$customIcon0 ${NC}$customColor0 $data ${customColor1}$customIcon0${NC}\n"
     fi
 }
 
@@ -107,10 +108,11 @@ CUSTOM () {
     shift 9
     local ttyMode=$1
     if [ "$ttyMode" = "tty" ]; then
-        printf " $customIcon0 $customText0 : $customText1\n${NC}"
+        echo "$customText0 : $customText1" >> /var/log/package.log
+        printf " $customIcon0 $customText0 : $customText1\n"
     else
         data=$(completeLine "$customText0" "$customRepeat0" 3 "$customText1" $customNumber);
-        printf " ${customColor2}${customIcon0} ${NC}${customColor0} $customText0${customColor1} $data ${customColor2}$customIcon1${NC}\n${NC}"
+        printf " ${customColor2}${customIcon0} ${NC}${customColor0} $customText0${customColor1} $data ${customColor2}$customIcon1${NC}\n"
     fi
 }
 
@@ -124,10 +126,11 @@ L1 () {
     
     local ttyMode=$1
     if [ "$ttyMode" = "tty" ]; then
-        printf " $customIcon0 $customText0 :\n${NC}"
+        echo "$customText0 : $customText1" >> /var/log/package.log
+        printf " $customIcon0 $customText0 :\n"
     else
         data=$(completeLine "$customText0" "$customRepeat0" 2);
-        printf " ${customColor1}$customIcon0 ${NC}$customColor0 $data ${customColor1}$customIcon0${NC}\n${NC}"
+        printf " ${customColor1}$customIcon0 ${NC}$customColor0 $data ${customColor1}$customIcon0${NC}\n"
     fi
 }
 

@@ -80,18 +80,18 @@ On_IWhite='\e[0;107m'   # White
 
 R1 () {
     data=$(completeLine "$2" "$5" 1);
-    printf " ${3}$4 ${NC}$1 $data ${3}$4${NC}\n${NC}"
+    printf " ${3}$4 ${NC}$1 $data ${3}$4${NC}\n"
 }
 
 CUSTOM () {
     echo $systemRUN
     data=$(completeLine "$2" "$7" 3 "$4" $9);
-    printf " ${5}$6 ${NC}$1 $2$3 $data ${5}$8${NC}\n${NC}"
+    printf " ${5}$6 ${NC}$1 $2$3 $data ${5}$8${NC}\n"
 }
 
 L1 () {
     data=$(completeLine "$2" "$5" 2);
-    printf " ${3}$4 ${NC}$1 $data ${3}$4${NC}\n${NC}"
+    printf " ${3}$4 ${NC}$1 $data ${3}$4${NC}\n"
 }
 
 completeLine() {
