@@ -133,7 +133,7 @@ else
     URLgithub="https://raw.githubusercontent.com/afimpel/upgrade-system-alpine"
 
     wget --no-cache -O - ${URLgithub}/main/installer.sh | sh
-    apk add xterm xdotool
+    apk add xterm xdotool wmctrl
     mkdir -p /usr/share/pixmaps/
     mkdir -p /usr/share/applications/
 
