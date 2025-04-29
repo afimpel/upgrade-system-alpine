@@ -2,9 +2,20 @@
 if [ ! -f ~/upgrade-system ]; then
         date > ~/upgrade-system
         echo 'Updating everything ... '
-	/usr/bin/xterm -geometry 140x30 -fa 'Monospace' -fs 16 -e 'sudo upgrade-system'
+	if [ -x "$(command -v notify-send)" ]; then
+		/usr/bin/notify-send "Updating everything ... " -i upgrade -t 5000 > /dev/null 2>&1
+	fi
+
+        packageUpdate0="Updating everything ... "
+        /usr/bin/xterm -fa 'Monospace' -title "$packageUpdate0" -fs 24 -e 'sleep 2s; wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz;sudo upgrade-system'
+
         sleep 6s
         echo 'Rebooting ... '
         rm ~/upgrade-system
+
+   	if [ -x "$(command -v notify-send)" ]; then
+		/usr/bin/notify-send "Rebooting ..." -i reboot -t 5000 > /dev/null 2>&1
+	fi
+
         sudo reboot
 fi
