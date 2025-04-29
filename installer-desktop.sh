@@ -84,7 +84,6 @@ R1 () {
 }
 
 CUSTOM () {
-    echo $systemRUN
     data=$(completeLine "$2" "$7" 3 "$4" $9);
     printf " ${5}$6 ${NC}$1 $2$3 $data ${5}$8${NC}\n"
 }
@@ -134,7 +133,7 @@ else
     URLgithub="https://raw.githubusercontent.com/afimpel/upgrade-system-alpine"
 
     wget --no-cache -O - ${URLgithub}/main/installer.sh | sh
-    apk add xterm
+    apk add xterm xdotool
     mkdir -p /usr/share/pixmaps/
     mkdir -p /usr/share/applications/
 
