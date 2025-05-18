@@ -108,8 +108,8 @@ CUSTOM () {
     local customNumber=$9
     shift 9
     local ttyMode=$1
+    echo "$customText0 : $customText1" > /var/log/package.log
     if [ "$ttyMode" = "tty" ]; then
-        echo "$customText0 : $customText1" >> /var/log/package.log
         printf " $customIcon0 $customText0 : $customText1\n"
     else
         data=$(completeLine "$customText0" "$customRepeat0" 3 "$customText1" $customNumber);
@@ -175,4 +175,5 @@ else
     packageUpdate0=$( echo $packageUpdate0 | rev | cut -d' ' -f1 | rev )
     packageUpdate=$((( $packageUpdate0 * 1 ) - 1))
     CUSTOM $Green "Upadate" $IGreen "${packageUpdate} packages" $BIGreen "▶" "." "▶" 0 "$@"
+    nohup chmod 777 /var/log/package.log >/dev/null 2>&1
 fi
