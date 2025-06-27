@@ -144,4 +144,8 @@ else
 
     chmod 777 /usr/bin/package-update -R
     chmod 777 /usr/bin/upgrade-system* -R
+    
+    echo "";
+	dates=$(date +'%Y-%m-%d %H:%M')
+	CUSTOM $Green "Installation completed" $IGreen "$dates" $BWhite "✔" "." "✔" 0
 fi

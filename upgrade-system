@@ -1,5 +1,6 @@
 #!/bin/bash
 # Reset
+postUpgrade="/opt/postUpgrade.sh"
 UUID=$(id -u)
 UUID=$(( UUID + 0 ))
 I_OK="✔"
@@ -171,25 +172,32 @@ if [ $UUID != 0 ]; then
 	exit 1;
 else
     /usr/bin/package-update "$@"
-        echo " ";
+    echo " ";
 	R1 $IBlue "Statistics" $BWhite '▶' "." "$@"
-        apk stats
-        echo " ";
-	R1 $IBlue "Updating" $BWhite '▶' "." "$@"
-        apk update
-        echo " ";
+    apk stats
+    echo " ";
 	R1 $IBlue "package list" $BWhite '▶' "." "$@"
-        apk version
-        echo " ";
+    apk version
+    echo " ";
 	R1 $IBlue "Installing Updates" $BWhite '▶' "." "$@"
-        apk upgrade -U --progress -a
-        echo " ";
-	R1 $IBlue "Fixed" $BWhite '▶' "." "$@"
-        apk fix
-        echo " ";
+    apk upgrade -U --progress -a
+    echo " ";
+ 	R1 $IGreen "Updated" $BWhite '✔' "." "$@"
+    echo " ";
+	R1 $IBlue "Fixing dependencies" $BWhite '▶' "." "$@"
+    apk fix
+    echo " ";
+	R1 $IGreen "Fixed" $BWhite '✔' "." "$@"
+    echo " ";
 	R1 $IBlue "Cleaning" $BWhite '▶' "." "$@"
-        rm /var/cache/apk/* -v
+    rm /var/cache/apk/* -v
+	R1 $IGreen "Cleaned" $BWhite '✔' "." "$@"
+    if [ -f "$postUpgrade" ]; then
         echo " ";
+        R1 $IBlue "Running postUpgrade" $BWhite '▶' "." "$@"
+        bash "$postUpgrade"
+    fi
+    echo " ";
 	dates=$(date +'%Y-%m-%d %H:%M')
 	CUSTOM $IYellow "Updated system" $IGreen "$dates" $BWhite "✔" "." "✔" 0 "$@"
 fi

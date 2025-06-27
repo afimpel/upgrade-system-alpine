@@ -152,4 +152,8 @@ else
     chmod 777 /usr/share/applications/gksu_*
     chmod 777 /usr/share/pixmaps/* -R
     chmod 777 /usr/bin/pkexec_upgrad* -R
+
+    echo " ";
+	dates=$(date +'%Y-%m-%d %H:%M')
+	CUSTOM $Green "Installation completed" $IGreen "$dates" $BWhite "✔" "." "✔" 0
 fi
