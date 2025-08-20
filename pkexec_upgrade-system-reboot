@@ -7,7 +7,7 @@ if [ ! -f ~/upgrade-system ]; then
 	fi
 
         packageUpdate0="Updating everything ... "
-        /usr/bin/xterm -fa 'Monospace' -title "$packageUpdate0" -fs 18 -e 'sleep 2s; wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz;sudo upgrade-system'
+        /usr/bin/xterm  -bg black -fg white -fa 'Monospace' -title "$packageUpdate0" -fs 18 -e 'sleep 2s; wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz;sudo upgrade-system'
 
         sleep 6s
         echo 'Rebooting ... '
