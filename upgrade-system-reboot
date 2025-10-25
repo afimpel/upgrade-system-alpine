@@ -170,6 +170,7 @@ if [ $UUID != 0 ]; then
         CUSTOM $Red "Start the Script as ROOT for it to work properly" $IRed "${USER^^}" $BIRed "✘" "." "✘" 0 "$@"
         exit 1;
 else
+        export step2systemUpgrade=yes
         bash /usr/bin/upgrade-system;
         echo " ";
         R1 $IGreen "Reboot" $BWhite '✔' "." "$@"
