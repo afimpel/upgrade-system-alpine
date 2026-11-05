@@ -1,3 +1,10 @@
+**Important:** This repository has been moved to GitLab so that all related repositories can be kept together in a single folder.
+
+* This repository: **[https://gitlab.com/alpine-linux/upgrade-system]**  
+* All related repositories: **[https://gitlab.com/alpine-linux]**
+
+----
+
 # upgrade-system-alpine
 Update to Alpine Linux, to perform a series of commands to make it more user friendly.
 
